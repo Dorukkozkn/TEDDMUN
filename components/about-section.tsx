@@ -31,7 +31,7 @@ export function AboutSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">About TEDDMUN</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">
-            As TEDDMUN, we help students develop diplomacy, leadership and global awareness
+            As TEDDMUN, we help students develop to diplomacy, leadership and global awareness
             skills. Through United Nations simulations, we enable young people to produce solutions to world problems.
           </p>
         </div>
