@@ -20,7 +20,7 @@ export function ActivitiesSection() {
     {
       title: "Fun and Interactive Activities ",
       description: "Beyond simulations, social events, games, and cultural exchanges will make the MUN experience more enjoyable.",
-      image: "/formal-un-style-meeting-room-with-students-in-suit.jpg",
+      image: "/dancing.jpg",
     },
   ]
 
