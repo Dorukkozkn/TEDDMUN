@@ -205,7 +205,7 @@ export function ApplicationForms() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Application Forms</h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto text-pretty">
-            Choose your application type and join our TEDD MUN community
+            Choose your application type and join our TEDDMUN community
           </p>
         </div>
 
