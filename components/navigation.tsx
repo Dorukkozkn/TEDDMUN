@@ -1,12 +1,20 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const { resolvedTheme } = useTheme()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -14,6 +22,8 @@ export function Navigation() {
     { name: "Activities", href: "#activities" },
     { name: "Join", href: "#applications" },
   ]
+
+  const logoSrc = mounted && resolvedTheme === "dark" ? "/images/ted-mun-logo-dark.png" : "/images/ted-mun-logo.png"
 
   return (
     <nav className="fixed top-0 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50 border-b border-border mb-8">
@@ -23,7 +33,7 @@ export function Navigation() {
             <div className="flex-shrink-0">
               <div className="flex items-center gap-3">
                 <Image
-                  src="/images/ted-mun-logo.png"
+                  src={logoSrc || "/placeholder.svg"}
                   alt="TED MUN Logo"
                   width={100}
                   height={100}
@@ -36,7 +46,7 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="ml-10 flex items-center space-x-4">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -46,11 +56,13 @@ export function Navigation() {
                   {item.name}
                 </a>
               ))}
+              <ThemeToggle />
             </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
             <Button variant="ghost" size="sm" onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
