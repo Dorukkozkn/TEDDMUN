@@ -29,9 +29,9 @@ export function AboutSection() {
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">About TEDDMUN</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">About TEDD MUN</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">
-            As TEDDMUN, we help students to develop diplomacy, leadership and global awareness
+            As TED Denizli School MUN Club, we help our students develop diplomacy, leadership and global awareness
             skills. Through United Nations simulations, we enable young people to produce solutions to world problems.
           </p>
         </div>
