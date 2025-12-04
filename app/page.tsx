@@ -14,10 +14,10 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <AboutSection />
+      <SecretariatLetter />
       <EventsSection />
       <ActivitiesSection />
       <JoinSection />
-      <SecretariatLetter />
       <ApplicationForms />
       <Footer />
     </main>
