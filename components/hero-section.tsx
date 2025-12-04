@@ -22,7 +22,7 @@ export function HeroSection() {
                   Join us on a journey of diplomacy, leadership and global awareness
                 </p>
                 <Button size="lg" className="hover:bg-accent/90 text-accent-foreground bg-destructive">
-                  Apply to Club
+                  Apply Now
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
