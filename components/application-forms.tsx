@@ -166,7 +166,7 @@ export function ApplicationForms() {
             Application Forms
           </h2>
           <p className="text-lg text-black dark:text-white max-w-2xl mx-auto text-pretty">
-            Choose your application type and join our TEDD MUN community
+            Choose your application type and join our TEDDMUN community
           </p>
         </div>
 
