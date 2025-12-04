@@ -16,7 +16,7 @@ export function HeroSection() {
               <div className="text-white text-center px-4 max-w-4xl mx-auto">
                 <h1 className="text-4xl md:text-6xl font-bold mb-4 text-balance">
                 
-                  <span className="block text-destructive">TEDD MUN</span>
+                  <span className="block text-destructive">TEDDMUN</span>
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 text-pretty max-w-3xl mx-auto">
                   Join us on a journey of diplomacy, leadership and global awareness
