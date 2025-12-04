@@ -50,7 +50,7 @@ export function Footer() {
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 flex-shrink-0" />
-                <span className="text-primary-foreground/80 text-sm">teddmunofficial@gmail.com</span>
+                <span className="text-primary-foreground/80 text-sm">teddmunofficial20@gmail.com</span>
               </div>
             </div>
           </div>
