@@ -17,22 +17,15 @@ export function HeroSection() {
                 <h1 className="text-4xl md:text-6xl font-bold mb-4 text-balance">
                   <span className="block text-destructive">TEDDMUN</span>
                 </h1>
-
                 <p className="text-xl md:text-2xl mb-8 text-pretty max-w-3xl mx-auto">
                   Join us on a journey of diplomacy, leadership and global awareness
                 </p>
-
-                <Button
-                  asChild
-                  size="lg"
-                  className="hover:bg-accent/90 text-accent-foreground bg-destructive"
-                >
-                  <a href="#application-forms">
+                <a href="#applications">
+                  <Button size="lg" className="hover:bg-accent/90 text-accent-foreground bg-destructive">
                     Apply Now
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
-                </Button>
-
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
