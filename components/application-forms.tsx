@@ -7,10 +7,10 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Users, User } from "lucide-react"
+import { Users, User, GraduationCap } from "lucide-react"
 
 export function ApplicationForms() {
-  const [activeForm, setActiveForm] = useState<"delegation" | "individual" | null>(null)
+  const [activeForm, setActiveForm] = useState<"delegation" | "individual" | "academy" | null>(null)
 
   const formTypes = [
     {
@@ -26,6 +26,13 @@ export function ApplicationForms() {
       description: "Apply as a single delegate to join existing delegations",
       icon: User,
       link: "https://docs.google.com/forms/d/e/1FAIpQLSex5bzJ-bgeCymTz6xwK87vFG5DLH0Qn5Yzmv8cS6yJm1tmNQ/viewform?usp=header",
+    },
+    {
+      id: "academy" as const,
+      title: "Apply as Academy Member",
+      description: "Join our MUN academy and enhance your skills",
+      icon: GraduationCap,
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSfYDitkZ-mtGRC7_osA2Mlx0mFPk1btppolkItRGE_Ic1FiiQ/viewform?usp=publish-editor",
     },
   ]
 
@@ -153,25 +160,50 @@ export function ApplicationForms() {
           </div>
         )
 
+      case "academy":
+        return (
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold">Academy Member Application</h3>
+            {commonFields}
+            <div>
+              <Label htmlFor="academyLevel">Academy Level</Label>
+              <Select>
+                <SelectTrigger>
+                  <SelectValue placeholder="Select your academy level" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="beginner">Beginner</SelectItem>
+                  <SelectItem value="intermediate">Intermediate</SelectItem>
+                  <SelectItem value="advanced">Advanced</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div>
+              <Label htmlFor="motivation">Motivation Letter</Label>
+              <Textarea id="motivation" placeholder="Why do you want to join the MUN academy?" />
+            </div>
+          </div>
+        )
+
       default:
         return null
     }
   }
 
   return (
-    <section id="applications" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-5 dark:bg-black">
+    <section id="applications" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance text-black dark:text-white">
             Application Forms
           </h2>
           <p className="text-lg text-black dark:text-white max-w-2xl mx-auto text-pretty">
-            Choose your application type and join our TEDDMUN community
+            Choose your application type and join our TEDD MUN community
           </p>
         </div>
 
         {!activeForm ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {formTypes.map((type) => {
               const Icon = type.icon
               return (
