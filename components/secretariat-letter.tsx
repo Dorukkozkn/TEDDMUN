@@ -96,12 +96,12 @@ export function SecretariatLetter() {
                 <div className="mt-10 pt-6 border-t border-gray-200">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <p className="text-lg font-bold text-black">Balamir Sertaç İşel</p>
+                      <p className="text-lg font-bold text-black">Emir Çınar</p>
                       <p className="text-accent font-medium">Director-General</p>
                     </div>
 
                     <div>
-                      <p className="text-lg font-bold text-black">Emir Çınar</p>
+                      <p className="text-lg font-bold text-black">Balamir Sertaç İşel</p>
                       <p className="text-accent font-medium">Deputy Director-General</p>
                     </div>
                   </div>
