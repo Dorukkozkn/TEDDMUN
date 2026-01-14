@@ -41,7 +41,7 @@ export function AboutSection() {
             <Card key={index} className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="mx-auto w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="h-6 w-6 text-chart-5" />
+                  <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <CardTitle className="text-lg">{feature.title}</CardTitle>
               </CardHeader>
