@@ -26,21 +26,21 @@ export function ApplicationForms() {
       title: "Apply as Delegation",
       description: "Apply as a group representing an organization",
       icon: Users,
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSfYJQ7Bwx3qEkvcl3R7dI3afNY3VGwJgY0OuvEVXi6BYw349A/viewform?usp=publish-editor",
+      link: "",
     },
     {
       id: "individual" as const,
       title: "Apply as Individual Delegate",
       description: "Apply as a single delegate to join existing delegations",
       icon: User,
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSex5bzJ-bgeCymTz6xwK87vFG5DLH0Qn5Yzmv8cS6yJm1tmNQ/viewform?usp=header",
+      link: "",
     },
     {
       id: "academy" as const,
       title: "Apply as Academy Member",
       description: "Join our MUN academy and enhance your skills",
       icon: GraduationCap,
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSfYDitkZ-mtGRC7_osA2Mlx0mFPk1btppolkItRGE_Ic1FiiQ/viewform?usp=publish-editor",
+      link: "",
     },
   ]
 
@@ -149,7 +149,7 @@ export function ApplicationForms() {
                 </CardHeader>
                 <CardContent>
                   <a href={type.link} target="_blank" rel="noopener noreferrer">
-                    <Button className="w-full">Apply Now</Button>
+                    <Button className="w-full">Applications Are Closed</Button>
                   </a>
                 </CardContent>
               </Card>
