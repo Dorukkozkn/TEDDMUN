@@ -114,7 +114,7 @@ export function HeroSection() {
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
               TEDDMUN
             </p>
-            <p className="mt-1 text-2xl font-black text-destructive">2026</p>
+            <p className="mt-1 text-2xl font-black text-destructive">II</p>
           </div>
         </div>
       </div>
