@@ -18,13 +18,6 @@ import {
 export function ApplicationForms() {
   const formTypes = [
     {
-      title: "Apply as Delegation",
-      description:
-        "Apply as a delegation representing a school, organization, or community.",
-      icon: Users,
-      link: "",
-    },
-    {
       title: "Apply as Individual Delegate",
       description:
         "Apply individually and take part in TEDDMUN as a single delegate.",
