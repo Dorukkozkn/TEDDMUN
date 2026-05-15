@@ -98,24 +98,6 @@ export function AboutSection() {
                 culture of diplomacy in a professional conference atmosphere.
               </p>
             </CardHeader>
-
-            <CardContent className="relative z-10 p-8 pt-0">
-              <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-6">
-                <div>
-                  <p className="text-3xl font-black text-destructive">4+</p>
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    Core Skills
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-3xl font-black text-destructive">UN</p>
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    Simulation
-                  </p>
-                </div>
-              </div>
-            </CardContent>
           </Card>
 
           {/* Feature cards */}
