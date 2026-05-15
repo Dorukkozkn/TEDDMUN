@@ -79,7 +79,7 @@ export function AboutSection() {
         {/* Main content */}
         <div className="grid gap-8 lg:grid-cols-[1.05fr_1.95fr]">
           {/* Left big card */}
-          <Card className="group relative overflow-hidden rounded-3xl border-white/10 bg-white/[0.04] shadow-2xl backdrop-blur-md">
+ <Card className="group relative h-fit self-start overflow-hidden rounded-3xl border-white/10 bg-white/[0.04] shadow-2xl backdrop-blur-md">
             <div className="absolute inset-0 bg-gradient-to-br from-destructive/20 via-transparent to-transparent opacity-70" />
             <div className="absolute -right-20 -top-20 h-48 w-48 rounded-full bg-destructive/20 blur-[70px]" />
 
