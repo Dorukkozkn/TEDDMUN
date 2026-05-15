@@ -6,104 +6,180 @@ export function SecretariatLetter() {
   const [activeTab, setActiveTab] = useState<"secretariat" | "directoria">("secretariat")
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-black">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex justify-center gap-4 mb-12">
-            <button
-              onClick={() => setActiveTab("secretariat")}
-              className={`px-6 py-3 rounded-full font-semibold transition-all ${
-                activeTab === "secretariat"
-                  ? "bg-accent text-white"
-                  : "bg-white dark:bg-gray-800 text-black dark:text-white border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
-              }`}
-            >
-              Secretariat Letter
-            </button>
-            <button
-              onClick={() => setActiveTab("directoria")}
-              className={`px-6 py-3 rounded-full font-semibold transition-all ${
-                activeTab === "directoria"
-                  ? "bg-accent text-white"
-                  : "bg-white dark:bg-gray-800 text-black dark:text-white border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
-              }`}
-            >
-              Directoria Letter
-            </button>
-          </div>
+    <section className="relative overflow-hidden bg-background px-4 py-24 sm:px-6 lg:px-8">
+      {/* Background effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-muted/20 via-background to-background" />
+      <div className="absolute -left-32 top-24 h-72 w-72 rounded-full bg-destructive/10 blur-[100px]" />
+      <div className="absolute -right-32 bottom-24 h-72 w-72 rounded-full bg-destructive/10 blur-[100px]" />
 
-          <div className="bg-white dark:bg-white rounded-2xl shadow-lg p-8 md:p-12">
+      <div className="relative z-10 mx-auto max-w-5xl">
+        {/* Header */}
+        <div className="mx-auto mb-12 max-w-3xl text-center">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-destructive">
+            TEDDMUN 2026
+          </p>
+
+          <h2 className="text-balance text-4xl font-black tracking-tight text-foreground sm:text-5xl md:text-6xl">
+            Letters from the
+            <span className="block bg-gradient-to-r from-red-500 via-red-400 to-red-600 bg-clip-text text-transparent">
+              Executive Team
+            </span>
+          </h2>
+
+          <p className="mx-auto mt-6 max-w-2xl text-pretty text-base leading-8 text-muted-foreground sm:text-lg">
+            A message from the teams who have worked to shape TEDDMUN into a
+            meaningful, professional, and unforgettable conference experience.
+          </p>
+        </div>
+
+        {/* Tabs */}
+        <div className="mb-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <button
+            onClick={() => setActiveTab("secretariat")}
+            className={`rounded-full px-7 py-3 text-sm font-semibold shadow-lg transition-all duration-300 ${
+              activeTab === "secretariat"
+                ? "bg-destructive text-white shadow-destructive/30"
+                : "border border-white/10 bg-white/[0.04] text-muted-foreground backdrop-blur-md hover:bg-white/[0.08] hover:text-foreground"
+            }`}
+          >
+            Secretariat Letter
+          </button>
+
+          <button
+            onClick={() => setActiveTab("directoria")}
+            className={`rounded-full px-7 py-3 text-sm font-semibold shadow-lg transition-all duration-300 ${
+              activeTab === "directoria"
+                ? "bg-destructive text-white shadow-destructive/30"
+                : "border border-white/10 bg-white/[0.04] text-muted-foreground backdrop-blur-md hover:bg-white/[0.08] hover:text-foreground"
+            }`}
+          >
+            Directoria Letter
+          </button>
+        </div>
+
+        {/* Letter Card */}
+        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-2xl backdrop-blur-md sm:p-8 md:p-12">
+          <div className="absolute inset-0 bg-gradient-to-br from-destructive/10 via-transparent to-transparent" />
+          <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-destructive/20 blur-[90px]" />
+
+          <div className="relative z-10">
             {activeTab === "secretariat" ? (
               <>
-                <p className="text-lg font-semibold text-black mb-6">Dear Delegates,</p>
+                <p className="mb-7 text-lg font-bold text-foreground">
+                  Dear Delegates,
+                </p>
 
-                <div className="space-y-4 text-black leading-relaxed">
-                  <p>We are delighted to welcome you to TEDDMUN 2026.</p>
-
+                <div className="space-y-5 text-pretty text-base leading-8 text-muted-foreground md:text-lg">
                   <p>
-                    During this conference, you will have the chance to sharpen your diplomatic abilities, exchange
-                    ideas with participants from various communities, and take part in discussions that challenge your
-                    perspective.
+                    It is our greatest pleasure to welcome you to TEDDMUN 2026,
+                    a conference built upon the values of diplomacy, academic
+                    excellence, leadership, and mutual respect.
                   </p>
 
                   <p>
-                    Throughout the three days, you will explore major global issues, work toward creative solutions, and
-                    gain insights that will support your personal and academic growth. We encourage every delegate to
-                    express their views confidently, listen with an open mind, and uphold a respectful and professional
-                    atmosphere in every session.
+                    As the Secretariat, our aim is to create an environment
+                    where every delegate feels encouraged to speak, think
+                    critically, negotiate with purpose, and represent their
+                    assigned nations with confidence. TEDDMUN is not only a
+                    simulation of the United Nations; it is also an opportunity
+                    for young people to understand the world from different
+                    perspectives and to discover the power of dialogue.
                   </p>
 
                   <p>
-                    As the Secretariat, our wish is that TEDDMUN 2026 becomes an experience that empowers you as
-                    emerging leaders, broadens your understanding of the world, and helps you build meaningful
-                    friendships that continue long after the conference ends.
+                    Throughout the conference, you will discuss global issues,
+                    defend policies, build alliances, draft resolutions, and
+                    experience the responsibilities of diplomacy. We hope that
+                    each session helps you improve your academic skills while
+                    also allowing you to form meaningful connections with
+                    fellow participants.
+                  </p>
+
+                  <p>
+                    We sincerely hope TEDDMUN 2026 becomes a memorable
+                    experience for every delegate, chair, and member of our
+                    team. We look forward to seeing your ideas, your passion,
+                    and your dedication throughout the conference.
                   </p>
                 </div>
 
-                <div className="mt-10 pt-6 border-t border-gray-200">
-                  <p className="text-black font-medium mb-6">Sincerely,</p>
+                <div className="mt-10 border-t border-white/10 pt-8">
+                  <p className="mb-7 font-medium text-foreground">
+                    Sincerely,
+                  </p>
 
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <p className="text-lg font-bold text-black">Deniz Akça</p>
-                      <p className="text-accent font-medium">Secretary-General</p>
+                  <div className="grid gap-6 md:grid-cols-3">
+                    <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                      <p className="text-lg font-bold text-foreground">
+                        Doruk Özkan
+                      </p>
+                      <p className="mt-1 font-medium text-destructive">
+                        Co Secretary-General
+                      </p>
                     </div>
 
-                    <div>
-                      <p className="text-lg font-bold text-black">Ada Güven</p>
-                      <p className="text-accent font-medium">Deputy Secretary-General</p>
+                    <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                      <p className="text-lg font-bold text-foreground">
+                        Deniz Akça
+                      </p>
+                      <p className="mt-1 font-medium text-destructive">
+                        Co Secretary-General
+                      </p>
+                    </div>
+
+                    <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                      <p className="text-lg font-bold text-foreground">
+                        Celal Canlı
+                      </p>
+                      <p className="mt-1 font-medium text-destructive">
+                        Deputy Secretary-General
+                      </p>
                     </div>
                   </div>
                 </div>
               </>
             ) : (
               <>
-                <p className="text-lg font-semibold text-black mb-6">Our most dear delegates,</p>
+                <p className="mb-7 text-lg font-bold text-foreground">
+                  Distinguished Participants,
+                </p>
 
-                <div className="space-y-4 text-black leading-relaxed">
+                <div className="space-y-5 text-pretty text-base leading-8 text-muted-foreground md:text-lg">
                   <p>
-                    We, as the directoria of this conference have put in as much effort as we could to make these 3 days
-                    the best MUN experience of your lives. It was tiring at times but was still worth it in the end, we
-                    have prepared only the best for you and we hope you enjoy your time during this event.
+                    On behalf of the Directoria, it is a great honor to welcome
+                    you to TEDDMUN 2026. Behind every successful conference,
+                    there is a team working with dedication, discipline, and
+                    attention to every detail, and our goal has been to prepare
+                    an experience that reflects the quality and spirit of
+                    TEDDMUN.
                   </p>
 
                   <p>
-                    It is a great honor to be hosting an MUN conference after all this time, we expect to see all of
-                    you!
+                    From logistics to communication, from planning to execution,
+                    every step has been shaped with one purpose: to make sure
+                    that all participants feel welcomed, guided, and fully ready
+                    to enjoy the conference. We believe that a strong
+                    organization is what allows academic discussions to take
+                    place smoothly and meaningfully.
+                  </p>
+
+                  <p>
+                    We hope that TEDDMUN 2026 will be remembered not only for
+                    its committees and debates, but also for its atmosphere,
+                    friendships, and the sense of community it creates. We are
+                    excited to welcome you and to share this experience with all
+                    of you.
                   </p>
                 </div>
 
-                <div className="mt-10 pt-6 border-t border-gray-200">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <p className="text-lg font-bold text-black">Emir Çınar</p>
-                      <p className="text-accent font-medium">Director-General</p>
-                    </div>
-
-                    <div>
-                      <p className="text-lg font-bold text-black">Balamir Sertaç İşel</p>
-                      <p className="text-accent font-medium">Deputy Director-General</p>
-                    </div>
+                <div className="mt-10 border-t border-white/10 pt-8">
+                  <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                    <p className="text-lg font-bold text-foreground">
+                      Arda Sevil
+                    </p>
+                    <p className="mt-1 font-medium text-destructive">
+                      Director-General
+                    </p>
                   </div>
                 </div>
               </>
