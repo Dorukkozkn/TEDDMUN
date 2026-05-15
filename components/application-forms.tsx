@@ -7,7 +7,6 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import {
-  Users,
   User,
   GraduationCap,
   ArrowUpRight,
@@ -68,20 +67,20 @@ export function ApplicationForms() {
         </div>
 
         {/* Application cards */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
           {formTypes.map((type, index) => {
             const Icon = type.icon
 
             return (
               <Card
                 key={index}
-                className="group relative overflow-hidden rounded-3xl border-white/10 bg-white/[0.04] shadow-xl backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-destructive/40 hover:shadow-2xl"
+                className="group relative flex min-h-[360px] flex-col overflow-hidden rounded-3xl border-white/10 bg-white/[0.04] shadow-xl backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-destructive/40 hover:shadow-2xl"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/[0.06] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <div className="absolute -right-20 -top-20 h-44 w-44 rounded-full bg-destructive/10 blur-[70px] transition-all duration-300 group-hover:bg-destructive/20" />
 
-                <CardHeader className="relative z-10 p-7 text-center">
-                  <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-destructive/15 text-destructive ring-1 ring-destructive/20 transition-all duration-300 group-hover:bg-destructive group-hover:text-white group-hover:shadow-lg group-hover:shadow-destructive/30">
+                <CardHeader className="relative z-10 p-8 text-center">
+                  <div className="mx-auto mb-7 flex h-16 w-16 items-center justify-center rounded-2xl bg-destructive/15 text-destructive ring-1 ring-destructive/20 transition-all duration-300 group-hover:bg-destructive group-hover:text-white group-hover:shadow-lg group-hover:shadow-destructive/30">
                     <Icon className="h-7 w-7" />
                   </div>
 
@@ -89,16 +88,17 @@ export function ApplicationForms() {
                     {type.title}
                   </CardTitle>
 
-                  <CardDescription className="text-pretty text-sm leading-7 text-muted-foreground">
+                  <CardDescription className="mx-auto mt-3 max-w-sm text-pretty text-sm leading-7 text-muted-foreground">
                     {type.description}
                   </CardDescription>
                 </CardHeader>
 
-                <CardContent className="relative z-10 p-7 pt-0">
+                <CardContent className="relative z-10 mt-auto p-8 pt-0">
                   <a
                     href={type.link || "#applications"}
                     target={type.link ? "_blank" : undefined}
                     rel={type.link ? "noopener noreferrer" : undefined}
+                    className="block"
                   >
                     <Button
                       disabled={!type.link}
